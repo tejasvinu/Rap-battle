@@ -1,7 +1,9 @@
+import os
 import json
 
 # Load settings from settings.json
-with open('settings.json') as f:
+settings_path = os.path.join(os.path.dirname(__file__), '..', 'settings.json')
+with open(settings_path) as f:
     settings = json.load(f)
 
 import streamlit as st

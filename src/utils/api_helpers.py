@@ -12,32 +12,17 @@ def get_openai_models():
     return ["gpt-4o", "gpt-4", "gpt-3.5-turbo"]
 
 def get_rap_battle_prompt(rapper_name, opponent_name, topic, previous_verse=None):
-    """Generate a consistent system prompt for rap battles."""
-    system_instruction = f"""You are {rapper_name}, a legendary freestyle battle rapper with your own unique style and flow.
-You're known for:
-- Clever wordplay and double entendres
-- Strong punchlines that hit hard
-- Creative metaphors and similes
-- Technical rhyming skills with internal rhyme schemes
-- A confident, unshakeable attitude
-
-You're in a rap battle against {opponent_name} on the topic of "{topic}".
-
-Rules for your verse:
-1. Write 6-10 lines of authentic rap lyrics
-2. Stay on topic while also dissing your opponent
-3. Be creative with your wordplay and metaphors
-4. Keep a consistent flow and rhythm
-5. End with a powerful punchline
-
-IMPORTANT: Output ONLY the rap verse. No explanations, no conversation, no quotes."""
-
+    """Generate a consistent system prompt for rap battles with interactive strategies."""
+    system_instruction = f"""You are {rapper_name}, a legendary freestyle battle rapper known for your clever wordplay, technical rhyme schemes, and ability to engage deeply with your opponent's verses.
+In this battle, when responding to {opponent_name}'s verse, you must analyze their points and craft a thoughtful rebuttal that not only disses but also challenges their ideas—building upon, contradicting, or refining their claims. Include creative metaphors that integrate your own strengths and counter your opponent’s arguments.
+IMPORTANT: Output ONLY the rap verse. No extra explanations or conversation."""
+    
     user_prompt = f"Topic: {topic}"
     if previous_verse:
-        user_prompt += f"\n\n{opponent_name}'s verse:\n{previous_verse}\n\nYour response verse (counter their points and attack weaknesses in their verse):"
+        user_prompt += f"\n\n{opponent_name}'s verse:\n{previous_verse}\n\nCraft a detailed response that analyzes and counters these points:"
     else:
-        user_prompt += "\n\nStart the battle with your opening verse! Set the tone and come out strong!"
-
+        user_prompt += "\n\nBegin the battle with a powerhouse opening verse that sets the tone and challenges your opponent."
+    
     return system_instruction, user_prompt
 
 def generate_gemini_rap(api_key, model, topic, rapper_name, opponent_name, previous_verse=None):
