@@ -1,8 +1,10 @@
 import os
 import json
 
-# Load settings from settings.json
-settings_path = os.path.join(os.path.dirname(__file__), '..', 'settings.json')
+# Load settings using the helper function for proper absolute path resolution
+from utils.helpers import get_settings_path, load_settings
+
+settings_path = get_settings_path()
 with open(settings_path) as f:
     settings = json.load(f)
 
