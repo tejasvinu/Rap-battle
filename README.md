@@ -11,6 +11,7 @@ rap-battle-arena/
 │   ├── pages/           # Different rooms in our rap battle mansion
 │   │   ├── home.py      # The welcome mat, where you get the lowdown
 │   │   └── rap_battle.py # ⚔️ The arena! Where the battles go down! ⚔️
+│   │   └── battle_history.py # 📜 The history! Where past battles are recorded! 📜
 │   └── utils/           # Our toolbox of secret weapons
 │       ├── api_helpers.py # Wrangling those API calls like a digital cowboy
 │       └── helpers.py   # Little helpers that make life easier
@@ -18,6 +19,14 @@ rap-battle-arena/
 ├── requirements.txt     # The ingredients list for our AI cocktail
 └── README.md            # THIS VERY FILE! You're reading it! Meta!
 ```
+
+## Features
+
+- Set up rap battles between Gemini and OpenAI models
+- Customize rapper names and topics
+- Multiple battle rounds
+- See how different AI models approach creative tasks
+- View battle history and analyze past performances
 
 ## Installation (aka Getting Your Ticket to the Show)
 

@@ -27,12 +27,14 @@ def main():
     
     # Sidebar for navigation
     st.sidebar.title("Navigation")
-    page = st.sidebar.radio("Go to", ("Home", "Rap Battle", "Other Page"))
+    page = st.sidebar.radio("Go to", ("Home", "Rap Battle", "Battle History", "Other Page"))
 
     if page == "Home":
         home.render_home()
     elif page == "Rap Battle":
         rap_battle.render_rap_battle()
+    elif page == "Battle History":
+        st.write("This is the Battle History page.")
     else:
         st.write("This is another page.")
 
