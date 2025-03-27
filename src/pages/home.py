@@ -10,6 +10,7 @@ def render_home():
     - Customize rapper names and topics
     - Multiple battle rounds
     - See how different AI models approach creative tasks
+    - View battle history and analyze past performances
     
     Navigate to the 'Rap Battle' page to get started!
     """)
@@ -21,6 +22,8 @@ def render_home():
     
     st.sidebar.header("Navigation")
     st.sidebar.write("Use the sidebar to navigate through the app.")
+    
+    st.markdown("[Go to Battle History](#)", unsafe_allow_html=True)
     
 # Call the render_home function to display the content
 if __name__ == "__main__":
