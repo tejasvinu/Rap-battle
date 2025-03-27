@@ -27,6 +27,10 @@ rap-battle-arena/
 - Multiple battle rounds
 - See how different AI models approach creative tasks
 - View battle history and analyze past performances
+- New "Surprise Element" option, adding random twists to each round
+- Dynamic audience reactions, displayed as emojis and comments during the battle
+- Animated transitions and sound effects to enhance the battle experience
+- Detailed analytics in battle history, showing performance metrics and highlights for each battle
 
 ## Installation (aka Getting Your Ticket to the Show)
 
